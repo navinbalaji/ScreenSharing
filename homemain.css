@@ -1,0 +1,37 @@
+ 	html,body{
+  		margin: 0;
+  		height: 100%;
+  	}
+  	.mainhome{
+  		padding-top: 90px;
+  	}
+  	#btncol{
+  		background-color: #0091EA;
+  	}
+  	#btncolor{
+  		background-color: #EF6C00;
+  	}
+  	.dark-mode {
+filter: invert(1) hue-rotate(180deg)
+}
+.invert{
+filter: invert(1) hue-rotate(180deg)
+}
+  #foot{
+  	padding-top: 25px;
+  }
+  .textcolor{
+    color: #25CC80;
+  }
+
+  #btnstartsharing{
+background-color:#008080;
+  }
+
+  #btnend{
+    background-color: #FF0000;
+  }
+
+  #btncall{
+background-color:#000080;
+  }

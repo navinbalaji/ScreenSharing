@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Join Sharing</title>
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <!--  MaterialUI -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/4.11.2/index.js" integrity="sha512-M+M1BMqWdasOkFyPYZZWAhpkdzCJaxWHg4d20y+d8jlLhjJe1Pllkd3ZHOe4zbMMOK0Z5Amh27SwEhoMBIgTYQ==" crossorigin="anonymous"></script> -->
+
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+
+  <!-- jQuery and JS bundle w/ Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.9.3/simplepeer.min.js" integrity="sha512-0j8yvyjRIWuD9DD6gIKgQArBwURjNZoud+kvmcJC4zmxusqjnrHS7jwUZIBASfoZ00H5TAJJM5RH7RbxOU0iig==" crossorigin="anonymous"></script>
+
+	 <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+      <script defer src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+       <link rel="stylesheet" href="homemain.css">
+       <style type="text/css">
+       	video{
+       		height:90%;
+       		width:100%;
+       	}
+       </style>
+        <script defer type="text/javascript" src="simple.js"></script>
+</head>
+<body>
+
+	<header class="mdc-top-app-bar inverted">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+      <span class="mdc-top-app-bar__title">Welcome to GroupMeets</span>
+    </section>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+      <button id="dark" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Favorite">nights_stay</button>
+  <!--     <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button> -->
+      <button class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+    </section>
+  </div>
+</header>
+
+         <video id="receiver" autoplay muted="true" controls class="inverted" ></video>
+
+	<section>
+		<div class="container p-2">
+			<div class="row">
+				<div class="col-md-3 text-center">
+					<button id="btnstartsharing" class="mdc-button mdc-button--raised" onclick="join()">
+                        <div class="mdc-button__ripple"></div>
+                         <i class="material-icons mdc-button__icon" aria-hidden="true">screen_share</i>
+                       <span class="mdc-button__label">StartSharing</span>
+                    </button>
+				</div>
+				<div class="col-md-6 text-center">
+					<button id="btnend" class="mdc-button mdc-button--raised" onclick="joinclose()">
+                        <div class="mdc-button__ripple"></div>
+                         <i class="material-icons mdc-button__icon" aria-hidden="true">call_end</i>
+                       <span class="mdc-button__label">End</span>
+                    </button>
+				</div>
+				<div class="col-md-3 text-center">
+					<button id="connect" class="mdc-button mdc-button--raised">
+                        <div class="mdc-button__ripple"></div>
+                         <i class="material-icons mdc-button__icon" aria-hidden="true">call</i>
+                       <span class="mdc-button__label">Connect to User</span>
+                    </button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="Home.js"></script>
+</body>
+</html>
